@@ -1,6 +1,6 @@
 # Causal-Aware Recommendation Engine
 
-A personalised movie recommendation system built on MovieLens 100K dataset, 
+A personalised movie recommendation system built on MovieLens 100K dataset,
 with SVD matrix factorisation and iterative model improvement.
 
 ## Results
@@ -17,7 +17,7 @@ with SVD matrix factorisation and iterative model improvement.
 - Google Colab
 
 ## Dataset
-MovieLens 100K — 100,000 ratings, 943 users, 1,682 movies  
+MovieLens 100K — 100,000 ratings, 943 users, 1,682 movies
 Source: grouplens.org
 
 ## Project Stages
