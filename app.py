@@ -6,8 +6,18 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 st.set_page_config(page_title="RecoSys", layout="wide")
 
+import os
+import urllib.request
+import zipfile
+
 @st.cache_data
 def load_data():
+    if not os.path.exists('ml-100k/u.data'):
+        url = "https://files.grouplens.org/datasets/movielens/ml-100k.zip"
+        urllib.request.urlretrieve(url, "ml-100k.zip")
+        with zipfile.ZipFile("ml-100k.zip", 'r') as zip_ref:
+            zip_ref.extractall(".")
+    
     ratings = pd.read_csv('ml-100k/u.data', sep='\t',
                           names=['user_id','movie_id','rating','timestamp'])
     movies = pd.read_csv('ml-100k/u.item', sep='|', encoding='latin-1',
