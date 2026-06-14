@@ -1,4 +1,4 @@
-echo "streamlit
+streamlit
 pandas
 numpy
-scikit-learn" > requirements.txt
+scikit-learn
